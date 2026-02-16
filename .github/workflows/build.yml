@@ -1,0 +1,20 @@
+name: Build APK
+on: [push] # This triggers the build every time you save code
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+      - name: Install Expo Tools
+        run: npm install -g expo-cli eas-cli
+      - name: Install Dependencies
+        run: npm install
+      - name: Build Android APK
+        run: |
+          # Note: This requires an EXPO_TOKEN if using EAS
+          # For a local-style build without tokens:
+          npx expo export
