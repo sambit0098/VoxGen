@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "VoxGen Studio",
+    "slug": "voxgen-studio",
+    "version": "1.0.0",
+    "ios": { "bundleIdentifier": "com.yourname.voxgen" },
+    "android": { "package": "com.yourname.voxgen" }
+  }
+}
